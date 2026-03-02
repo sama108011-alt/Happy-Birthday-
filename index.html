@@ -44,7 +44,7 @@
     <div id="gameScreen" class="game-screen">
         
         <div id="step1">
-            <h1>المرحلة 1: فك التشفير</h1>
+            <h1>المرحلة 1: </h1>
             <p>زرار كل ما ندوس علي بيتغير حاجة في الغرفة</p>
         
             <p>ما الكلمة الموجودة بالورقة؟</p>
@@ -53,7 +53,7 @@
         </div>
 
         <div id="step2" class="hidden">
-            <h1>المرحلة 2: لغز الجليد</h1>
+            <h1> لغز الجليد</h1>
             <p>علبة صفراء (بالليمون)</p>
             <p>ما هو الحرف المكتوب في الورقة؟</p>
             <input type="text" id="ans2" placeholder="أدخل الحرف">
@@ -61,13 +61,40 @@
         </div>
 
  <div id="step3" class="hidden">
-            <h1>المرحلة 3: لغز الجليد</h1>
-            <p>توجه للثلاجة. ابحث عن ورقة خلف علبة (العصير)!</p>
+            <h1>المرحلة 3: </h1>
+            <p>بيعلي او يوطي درجة حرارة الغرفة</p>
             <p>ما هو الرقم المكتوب في الورقة؟</p>
             <input type="text" id="ans3" placeholder="أدخل الحرف">
             <button class="btn" onclick="checkStep(3, 'ب')">تاكيد</button>
         </div>
 
+
+
+         <div id="step4" class="hidden">
+            <h1>المرحلة 4: </h1>
+            <p>بيعلي او يوطي درجة حرارة الغرفة</p>
+            <p>ما هو الرقم المكتوب في الورقة؟</p>
+            <input type="text" id="ans4" placeholder="أدخل الحرف">
+            <button class="btn" onclick="checkStep(4, 'ب')">تاكيد</button>
+        </div>
+
+
+         <div id="step5" class="hidden">
+            <h1>المرحلة 5: </h1>
+            <p>بيعلي او يوطي درجة حرارة الغرفة</p>
+            <p>ما هو الرقم المكتوب في الورقة؟</p>
+            <input type="text" id="ans5" placeholder="أدخل الحرف">
+            <button class="btn" onclick="checkStep(5, 'ب')">تاكيد</button>
+        </div>
+
+
+         <div id="step6" class="hidden">
+            <h1>المرحلة 6: </h1>
+            <p>بيعلي او يوطي درجة حرارة الغرفة</p>
+            <p>ما هو الرقم المكتوب في الورقة؟</p>
+            <input type="text" id="ans6" placeholder="أدخل الحرف">
+            <button class="btn" onclick="checkStep(6, 'ب')">تاكيد</button>
+        </div>
         
 
         <div id="final" class="hidden">
@@ -101,7 +128,17 @@
 if (step === 1) {
     next = 'step2';
 } else if (step === 2) {
-    next = 'step3'; // الآن سينتقل للمرحلة 3 بدلاً من النهاية
+    next = 'step3';
+
+    else if (step === 3) {
+    next = 'step4';
+
+else if (step === 4) {
+    next = 'step5';
+
+    else if (step === 5) {
+    next = 'step6';
+    
 } else {
     next = 'final'; // بعد المرحلة 3 يذهب للنهاية
 }
@@ -141,6 +178,7 @@ background-color:rgb(253, 225, 237) ;
 
 
 </style>
+
 
 
 
