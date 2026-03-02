@@ -58,7 +58,7 @@
             <div class="challenge-box">📸 التحدي المضحك: التقط سيلفي حزيناً مع "فاكهة"!</div>
             <p>ما هو الرقم المكتوب في الورقة؟</p>
             <input type="text" id="ans2" placeholder="أدخل الحرف">
-            <button class="btn" onclick="checkStep(2, 'ر')">تاكبد</button>
+            <button class="btn" onclick="checkStep(2, 'ر')">تاكيد</button>
         </div>
 
         <div id="final" class="hidden">
@@ -67,7 +67,7 @@
             <p>نجحتي في التحدي !</p>
             <div style="background:var(--secondary); padding:20px; border-radius:20px; color:white; font-weight:bold; font-size:1.2rem;">
             <br>
-              🎁جمع الحروف و ستجدي الهدية هناك
+              🎁جمعي الحروف و ستجدي الهدية هناك
             </div>
             <p>Happy Birthday Tuka! ❤️</p>
         </div>
@@ -91,7 +91,7 @@
             let next = (step === 1) ? 'step2' : 'final';
             document.getElementById(next).classList.remove('hidden');
         } else {
-            alert("❌ خطأ! يبدو ان الاكلمة خاطئة!");
+            alert("❌ خطأ! يبدو ان الكلمة خاطئة!");
         }
     }
 </script>
@@ -125,6 +125,7 @@ background-color:rgb(253, 225, 237) ;
 
 
 </style>
+
 
 
 
