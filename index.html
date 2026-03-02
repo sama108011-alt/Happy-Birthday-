@@ -63,7 +63,6 @@
  <div id="step3" class="hidden">
             <h1>المرحلة 3: لغز الجليد</h1>
             <p>توجه للثلاجة. ابحث عن ورقة خلف علبة (العصير)!</p>
-            <div class="challenge-box">📸 التحدي المضحك: التقط سيلفي حزيناً مع "فاكهة"!</div>
             <p>ما هو الرقم المكتوب في الورقة؟</p>
             <input type="text" id="ans3" placeholder="أدخل الحرف">
             <button class="btn" onclick="checkStep(3, 'ب')">تاكيد</button>
@@ -98,7 +97,14 @@
         if (userInput == correct) {
             alert("✅ أحسنت! المرحلة التالية فتحت.");
             document.getElementById('step' + step).classList.add('hidden');
-            let next = (step === 1) ? 'step2' : 'final';
+            let next;
+if (step === 1) {
+    next = 'step2';
+} else if (step === 2) {
+    next = 'step3'; // الآن سينتقل للمرحلة 3 بدلاً من النهاية
+} else {
+    next = 'final'; // بعد المرحلة 3 يذهب للنهاية
+}
             document.getElementById(next).classList.remove('hidden');
         } else {
             alert("❌ خطأ! يبدو ان الكلمة خاطئة!");
@@ -135,6 +141,7 @@ background-color:rgb(253, 225, 237) ;
 
 
 </style>
+
 
 
 
